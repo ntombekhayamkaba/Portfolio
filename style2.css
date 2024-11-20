@@ -318,19 +318,21 @@ h3{
 }
 
 /* ----- ABOUT INFO ----- */
-.about-info{
+.about-info {
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-block: 30px 70px;
     padding-inline: 20px;
-    width: 100%;
+    width: 80%; 
+    max-width: 500px;
     background: var(--color-bg);
     box-shadow: 1px 8px 10px 2px var(--color-text);
     border-radius: 20px;
 }
-.about-info p{
+
+.about-info p {
     text-align: center;
     font-size: 15px;
     color: #777;

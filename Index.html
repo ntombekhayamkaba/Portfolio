@@ -43,7 +43,6 @@
             </ul>
         </div>
         <div class="nav-button">
-            <!--<button class="CV">Download CV <i class="uil uil-file-alt"></i></button>-->
         </div>
         <div class="nav-menu-btn">
             <i class="uil uil-bars" onclick="myMenuFunction()"></i>
@@ -68,6 +67,7 @@
                 <a href="#contact" class="btn blue-btn">Hire Me</a>
 
                 <button class="btn" onclick="downloadCV()">Download CV <i class="uil uil-file-alt"></i></button>
+                <!-- <button class="btn" onclick="viewCV()">View CV <i class="uil uil-file-alt"></i></button> -->
             </div>
             <div class="social_icons">
                 <div class="icon"><a href="https://github.com/NtombekhayaMkaba" target="_blank"><i class="uil uil-github-alt"></i></a></div>
@@ -85,8 +85,6 @@
                 <p>Scroll Down</p>
             </a>
           </div>
-
-
 
     <!--================ABOUT==================-->
        </section>
@@ -192,6 +190,7 @@
             </div>
           </div>
        </section>
+
 <!-- Timeline section  -->
 
 <div class="main">
@@ -259,6 +258,12 @@
                   </div>
                   <div class="form-button">
                       <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                  </div>
+                  <div class="form-feedback" id="form-feedback" style="display: none; color: green;">
+                    Thank you! Your message has been sent.
+                  </div>
+                  <div class="form-feedback" id="form-feedback-error" style="display: none; color: red;">
+                    Oops! Something went wrong. Please try again.
                   </div>
               </form>
 
