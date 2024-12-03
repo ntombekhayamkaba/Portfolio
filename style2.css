@@ -783,7 +783,7 @@ h3 {
 .project-container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 20px;
   background-color: rgb(245, 245, 245);
 }
@@ -801,10 +801,11 @@ h3 {
   position: relative;
 }
 
-.project-box > i {
-  font-size: 50px;
-  color: #7f00ff;
-  margin-bottom: 25px;
+.project-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e100ff;
+  margin-bottom: 15px;
 }
 
 .project-box label {
@@ -812,41 +813,20 @@ h3 {
   color: #777;
 }
 
-.project-box h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #e100ff;
-  margin-bottom: 15px;
-}
-.project-screenshot {
-  width: 120px;  /* Adjust the width as needed */
-  height: 50px;  /* Maintain aspect ratio */
-  margin-top: 10px;
-}
-
-/* Responsive Design for Smaller Screens (Max-width: 768px) */
+/* Responsive Design for Medium Screens (Max-width: 768px) */
 @media (max-width: 768px) {
-  .project-container {
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-
   .project-box {
     flex: 1 1 calc(50% - 20px);  
     max-width: calc(50% - 20px);  
   }
 }
 
-/* Responsive Design for Extra Small Screens (Max-width: 350px) */
-@media (max-width: 350px) {
+/* Responsive Design for Small Screens (Max-width: 480px) */
+@media (max-width: 480px) {
   .project-box {
     flex: 1 1 100%; 
     max-width: 100%; 
     padding: 15px; 
-  }
-
-  .project-box > i {
-    font-size: 40px; 
   }
 
   .project-box h3 {
@@ -856,33 +836,19 @@ h3 {
   .project-box label {
     font-size: 14px;  
   }
+
+  .portfolio__button {
+    font-size: 14px;
+    bottom: 5px;
+    right: 5px;
+  }
 }
 
-/* Style for the See More link */
-.portfolio__button {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: #7f00ff;
-  font-weight: 600;
-  font-size: 16px;
-  transition: color 0.3s ease;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+/* Optional: Reduce icon size for small screens */
+.project-box > i {
+  font-size: 40px; /* Smaller icon on smaller screens */
 }
 
-/* Hover Effect */
-.portfolio__button:hover {
-  color: #6a00cc;
-  text-decoration: underline;
-}
-
-/* Icon Style */
-.portfolio__button .button__icon {
-  margin-left: 8px;
-  font-size: 16px;
-}
 
 
 
