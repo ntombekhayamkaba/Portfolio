@@ -108,7 +108,13 @@
             </li>
 
             <li class="nav__item">
-              <a href="#portfolio" class="nav__link noSelect">
+              <a href="#timeline" class="nav__link noSelect">
+                <i class="uil uil-file-alt nav__icon"></i> Timeline
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#project" class="nav__link noSelect">
                 <i class="uil uil-scenery nav__icon"></i> Projects
               </a>
             </li>
@@ -212,10 +218,10 @@
 
         <div class="about__data">
           <p class="about__description">
-            I have a Diploma in Information Technology from Nelson Mandela University, specializing in software development. I have 1 year of experience as a software developer, with skills in various programming languages. I am passionate about technology, detail-oriented, and eager to learn new skills.
-            I am an emerging software developer with a robust educational background and hands-on experience in web development. I have pursued and completed studies in IT, focusing on software development.
-            I am proficient in a variety of programming languages and technologies, including HTML, CSS, JavaScript, Python, C#, and SQL Server. This diverse skill set positions me as a versatile developer capable of handling both front-end and back-end development tasks effectively.<br />
-           
+            I am an emerging software developer with a strong educational foundation and hands-on experience in web development.
+            I hold a Diploma in Information Technology from Nelson Mandela University, specializing in software development. 
+            With 1 year of professional experience, I am proficient in multiple programming languages and technologies.
+  
           </p>
           <div class="about__info">
             <div>
@@ -255,25 +261,23 @@
         </div>
       </div>
     </section>
+<!-- PARENT CONTAINER -->
+ <div class="content-wrapper">
+
 
     <!--==================== SKILLS ====================-->
+
 
     <section class="skills section" id="skills">
       <h2 class="section__title">Skills</h2>
       <span class="section__subtitle">My tech stack</span>
       <div class="skills__container container grid">
         <div class="skills__container-box">
-          <a href="html.png" title="html icons"></a>
-            <img
-              class="skills__container-img"
-              src="./html.png" 
-              alt="HTML Icon"
-            />
+          <a href="html.png" title="HTML Icon">
+            <img class="skills__container-img" src="./html.png" alt="HTML Icon" />
           </a>
           <div class="skills__container-name">HTML</div>
         </div>
-        
-
         <div class="skills__container-box">
           <img
             class="skills__container-img"
@@ -339,40 +343,39 @@
                 <img class="skills__container-img" src="/assets/img/skills/figma.svg" alt="figma">
                 <div class="skills__container-name">Figma</div>
             </div> -->
-      </div>
-    </section>
+          </div>
+</section>
 
-    <!--==================== QUALIFICATOIN ====================-->
+    <!--==================== Timeline ====================-->
 
    
-<div class="main">
+<div class="main" id="timeline">
   <h3 class="head">Timeline</h3>
   <div class="containers">
       <ul>
           <li>
               <h3 class="heading">Software Developer</h3>
-              <p>Capaciti Candidate </p>
+              <h6>Capaciti Candidate </h6>
               <a href="#"></a>
               <span class="date">August 2024 - Present </span>
               <span class="circle"></span>
           </li>
           <li>
               <h3 class="heading">Software Developer Intern</h3>
-              <p>Nelson Mandela University, Holystic Approach </p>
-              <a href="#"></a>
+              <h6>Nelson Mandela University, Holystic Approach </h6>
               <span class="date">June 2023 - May 2024</span>
               <span class="circle"></span>
           </li>
           <li>
               <h3 class="heading">Diploma Information Technology in Software</h3>
-              <p>Nelson Mandela University </p>
+              <h6>Nelson Mandela University </h6>
               <a href="#"></a>
               <span class="date">2023</span>
               <span class="circle"></span>
           </li>
           <li>
               <h3 class="heading">Hcert Information Technology Support Services</h3>
-              <p>Nelson Mandela University </p>
+              <h6>Nelson Mandela University </h6>
               <a href="#"></a>
               <span class="date">2019</span>
               <span class="circle"></span>
@@ -380,120 +383,65 @@
       </ul>
   </div>
 </div>
-     
+<div class="content-wrapper">  
 
 
     <!--==================== PORTFOLIO ====================-->
-
-    <section class="portfolio section" id="portfolio">
-      <h2 class="section__title">Projects</h2>
-      <span class="section__subtitle">Most recent work</span>
-
-      <div class="portfolio__container container swiper-container">
-        <div class="swiper-wrapper">
-          <!--==================== PORTFOLIO 1====================-->
-          <div class="portfolio__content grid swiper-slide">
-            <img
-              src="Screenshot (29).png"
-              alt=""
-              class="portfolio__img"
-            />
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">ECD website</h3>
-              <p class="portfolio__description">
-                An Ecd website (early childhood application ), using HTML, CSS, and JavaScript.
-              </p>
-              <a
-                href="https://ubiquitous-cupcake-625729.netlify.app/ "
-                target="_blank"
-                class="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
+    <section class="section" id="project">
+      <div class="top-header">
+          <h1>Projects</h1>
+      </div>
+      <div class="project-container">
+          <div class="project-box">
+            <i class=""></i>
+            <h3>SmallSteps</h3>
+            <label> An Ecd website (early childhood application) this system is used to make it easy for parents to find the center and all information.</label>
+            <br>
+            <br>
+            <a href="https://ubiquitous-cupcake-625729.netlify.app/" target="_blank" class="portfolio__button">
+              see more
+              <i class="uil uil-arrow-right button__icon"></i>
+            </a>
           </div>
-          <br>
-          <br>
+    
+          <div class="project-box">
+            <i class=""></i>
+            <h3>EventPlannify Application</h3>
+            <label>This is the application where users can register, login and create events, each event comes with a unique password. On this application a user can also send invitations to guests.</label>
+           <br>
+           <br>
 
-
-          <!--==================== PORTFOLIO 2====================-->
-          <div class="portfolio__content grid swiper-slide">
-            <img
-              src="./Screenshot (32).png "
-              alt=""
-              class="portfolio__img"
-            />
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">EventPlannify desktop application </h3>
-              <p class="portfolio__description">
-                This is the application where users can register, login and create event, each event comes with a unique password. 
-                on this application a user can also send invitations to guests.
-              </p>
-              <a
-                href="https://github.com/SquadGoalsEvent/EventPlannify.git"
-                target="_blank"
-                class="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
+            <a href="https://github.com/SquadGoalsEvent/EventPlannify.git" target="_blank" class="portfolio__button">
+              see more
+              <i class="uil uil-arrow-right button__icon"></i>
+            </a>
           </div>
-          <br>
-          <br>
-
-          <!--==================== PORTFOLIO 3====================-->
-          <div class="portfolio__content grid swiper-slide">
-            <img
-              src="./Screenshot (33).png"
-              alt=""
-              class="portfolio__img"
-            />
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">Artify desktop application</h3>
-              <p class="portfolio__description">
-                It the machine learning in python project using tkinter as a Gui, 
-                this project is used to cartoonify images and add filters on those images plus can save the image on the database and on the local machine.
-                for the database we used sqlLite2. 
-              </p>
-              <a
-                href="https://github.com/Yandisa619/CartoonifyApp.git "
-                target="_blank"
-                class="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
+    
+          <div class="project-box">
+            <i class=""></i>
+            <h3>Artify Application</h3>
+            <label>It’s a machine learning project in Python using Tkinter as the GUI. This project is used to cartoonify images and add filters on those images.</label>
+            <a href="https://github.com/Yandisa619/CartoonifyApp.git" target="_blank" class="portfolio__button">
+              see more
+              <i class="uil uil-arrow-right button__icon"></i>
+            </a>
           </div>
-          <br>
-          <br>
-
-          <!--==================== PORTFOLIO 4====================-->
-          <!-- <div class="portfolio__content grid swiper-slide">
-            <img
-              src="/assets/img/portfolio/file-reader.png"
-              alt=""
-              class="portfolio__img"
-            />
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">File reader</h3>
-              <p class="portfolio__description">
-                Light weight file reader Angular component without external
-                libraries/dependencies.
-              </p>
-              <a
-                href="https://github.com/rawatanimesh/angular-file-reader"
-                target="_blank"
-                class="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-              </a>
-            </div>
-          </div> -->
-        </div>
+          
+          
+    
+          <div class="project-box">
+            <i class=""></i>
+            <h3>Recognize Application</h3>
+            <label>This project aims to create an advanced AI-powered clocking system for businesses, featuring face recognition technology and a user-friendly GUI built with Custom Tkinter.</label>
+            <a href="https://github.com/Yandisa619/clocking-system.git" target="_blank" class="portfolio__button">
+              see more
+              <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+          </div>
+      </div>
+    </section>
+    
+    
 
     <!--==================== PROJECT IN MIND ====================-->
 
@@ -547,7 +495,7 @@
         
           <div class="contact__content">
             <label for="message" class="contact__label">Message</label>
-            <textarea name="message" id="message" cols="0" rows="7" class="contact__input" required></textarea>
+            <textarea name="message" id="message" cols="0" rows="2" class="contact__input" required></textarea>
           </div>
         
           <!-- Hidden field for Web3Forms API key -->
@@ -596,6 +544,7 @@
   </footer>
 
   </div>
+ </div>
 
     <!--==================== SCROLL TOP ====================-->
 
@@ -605,6 +554,25 @@
 
     <!--==================== SWIPER JS ====================-->
     <script src="/assets/js/swiper-bundle.min.js"></script>
+
+    <!-- Swiper.js Library (Include in the head or before closing body tag) -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    loop: true, // Optional: makes it continuous
+  });
+</script>
+
 
     <!--==================== MAIN JS ====================-->
     <script src="script.js"></script>

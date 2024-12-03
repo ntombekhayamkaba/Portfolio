@@ -52,6 +52,9 @@
   --z-fixed: 100;
   --z-modal: 100;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* Font size for large devices */
 
@@ -499,11 +502,33 @@ header {
 }
 
 /*==================== SKILLS ====================*/
-
+.content-wrapper{
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  height: 100vh;
+}
 .skills__container {
+  width:100%;
+  max-width:800px;
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-items: center; 
+}
+.skills.section,
+.main{
+  height: auto;
+  min-height: 100vh ;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+
+.skills.section .section__subtitle,
+.main .containers ul li p {
+  display: none;  
 }
 
 .skills__container-box {
@@ -710,65 +735,130 @@ header {
 }
 
 /*==================== PROJECTS ====================*/
-
-.portfolio__container {
-  overflow:initial
+html {
+  scroll-behavior: smooth;  /* Smooth scrolling behavior */
 }
 
-.portfolio__content {
-  padding: 0 1.5rem;
+#projects {
+  padding-bottom: 50px; /* Ensure space at the bottom */
+  margin-bottom: 50px; /* Ensure space between sections */
 }
 
-.portfolio__img {
-  width: 265px;
-  border-radius: 0.5rem;
-  justify-self: center;
+/* Content Wrapper with Scroll */
+.content-wrapper {
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
-.portfolio__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-5);
+/* General Section */
+.section {
+  background-color: rgb(245, 245, 245);
+}
+.top-header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: rgb(245, 245, 245);
 }
 
-.portfolio__description {
-  margin-bottom: var(--mb-0-75);
+.top-header h1 {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 10px;
 }
 
-.portfolio__button:hover .button__icon {
-  transform: translateX(0.25rem);
+.top-header span {
+  background-color: rgb(245, 245, 245);
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  content: "";
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 15px;
 }
 
-.swiper-portfolio-icon {
-  font-size: 2rem;
-  color: var(--first-color);
+/* ----- PROJECTS BOX ----- */
+.project-container {
+  display: flex;
+  justify-content: space-between; /* Spread the items across the row */
+  flex-wrap: nowrap;              /* Prevent wrapping of items */
+  gap: 20px;                      /* Space between boxes */
+  background-color: rgb(245, 245, 245);
 }
 
-.swiper-button-prev {
-  left: -0.5rem;
+.project-box {
+  flex: 1 1 calc(25% - 20px);     /* Four items per row (adjust the percentage as needed) */
+  max-width: 400px;               /* Set a maximum width */
+  background-color: #f9f9f9;     /* Set background color */
+  border-radius: 12px;            /* Slightly rounded corners */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Softer box shadow */
+  overflow: hidden;               /* Hide overflow */
+  text-align: center;             /* Center-align content */
+  padding: 20px;                  /* Add internal padding */
+  margin-bottom: 20px; 
+  position: relative;             /* Space below each box */
 }
 
-.swiper-button-next {
-  right: -0.5rem;
+.project-box > i {
+  font-size: 50px;
+  color: #7f00ff;
+  margin-bottom: 25px;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 0.5rem;
+.project-box label {
+  font-size: 15px;
+  color: #777;
 }
 
-.swiper-pagination-bullet-active {
-  background-color: var(--first-color);
+.project-box h3{
+  font-size: 20px;
+  font-weight: 600;
+  color:#e100ff;
+  margin-bottom: 15px;
 }
 
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-pagination-bullet {
-  outline: none;
+
+
+/* Responsive Design for Smaller Screens (Optional) */
+@media (max-width: 768px) {
+  .project-container {
+    justify-content: space-evenly;  /* Adjust spacing for smaller screens */
+  }
+  
+  .project-box {
+    flex: 1 1 calc(33% - 20px);    /* Three items per row */
+    max-width: none;               /* Remove max-width constraint */
+  }
+}/* Style for the See More link */
+/* Style for the See More link */
+.portfolio__button {
+  display: inline-flex;               /* Use flexbox for alignment */
+  align-items: center;                /* Align the icon and text vertically */
+  text-decoration: none;               /* Remove underline */
+  color: #7f00ff;                     /* Purple color */
+  font-weight: 600;                    /* Bold font */
+  font-size: 16px;                     /* Adjust font size */
+  transition: color 0.3s ease;         /* Smooth color change on hover */
+  position: absolute;                  /* Position the button absolutely */
+  bottom: 10px;                        /* 10px from the bottom of the project box */
+  right: 10px;                         /* 10px from the right edge of the project box */
 }
+
+/* Hover Effect */
+.portfolio__button:hover {
+  color: #6a00cc;                     /* Darker purple on hover */
+  text-decoration: underline;          /* Underline text on hover */
+}
+
+/* Icon Style */
+.portfolio__button .button__icon {
+  margin-left: 8px;                    /* Space between the text and icon */
+  font-size: 18px;                     /* Icon size */
+}
+
+
+
 /*==================== PROJECT IN MIND ====================*/
 
 .project {
@@ -797,7 +887,14 @@ header {
 /*==================== TESTIMONIAL ====================*/
 
 /*==================== CONTACT ME ====================*/
-
+#contact {
+  padding-top: 50px; /* Space at the top of the Contact Me section */
+}
+.content-wrapper{
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  height: 100vh;
+}
 .contact__container {
   row-gap: 3rem;
 }
@@ -1273,7 +1370,7 @@ header {
   }
   
   
-}
+
 
 /* For large devices */
 
@@ -1335,6 +1432,7 @@ header {
 	position: relative;
 	margin-bottom: 100px;
 	font-weight: 500;
+
 }
 .main .head::after {
 	content: " ";
@@ -1347,7 +1445,7 @@ header {
 	background-image: linear-gradient(to right, rgba(91, 14, 216, 0.767), rgba(238, 12, 200, 0.747));
 }
 .containers {
-	width: 70%;
+	width: 100%;
 	height: auto;
 	margin: auto 0;
 	position: relative;
@@ -1447,4 +1545,3 @@ ul li a {
 	color: rgb(18, 54, 214);
 	transition: all 0.3s ease;
 }
-
