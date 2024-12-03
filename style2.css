@@ -736,12 +736,12 @@ header {
 
 /*==================== PROJECTS ====================*/
 html {
-  scroll-behavior: smooth;  /* Smooth scrolling behavior */
+  scroll-behavior: smooth;
 }
 
 #projects {
-  padding-bottom: 50px; /* Ensure space at the bottom */
-  margin-bottom: 50px; /* Ensure space between sections */
+  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 /* Content Wrapper with Scroll */
@@ -755,6 +755,7 @@ html {
 .section {
   background-color: rgb(245, 245, 245);
 }
+
 .top-header {
   text-align: center;
   margin-bottom: 20px;
@@ -781,23 +782,23 @@ h3 {
 /* ----- PROJECTS BOX ----- */
 .project-container {
   display: flex;
-  justify-content: space-between; /* Spread the items across the row */
-  flex-wrap: nowrap;              /* Prevent wrapping of items */
-  gap: 20px;                      /* Space between boxes */
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  gap: 20px;
   background-color: rgb(245, 245, 245);
 }
 
 .project-box {
-  flex: 1 1 calc(25% - 20px);     /* Four items per row (adjust the percentage as needed) */
-  max-width: 400px;               /* Set a maximum width */
-  background-color: #f9f9f9;     /* Set background color */
-  border-radius: 12px;            /* Slightly rounded corners */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Softer box shadow */
-  overflow: hidden;               /* Hide overflow */
-  text-align: center;             /* Center-align content */
-  padding: 20px;                  /* Add internal padding */
-  margin-bottom: 20px; 
-  position: relative;             /* Space below each box */
+  flex: 1 1 calc(33% - 20px); 
+  max-width: calc(33% - 20px); 
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .project-box > i {
@@ -811,51 +812,78 @@ h3 {
   color: #777;
 }
 
-.project-box h3{
-  font-size: 20px;
+.project-box h3 {
+  font-size: 18px;
   font-weight: 600;
-  color:#e100ff;
+  color: #e100ff;
   margin-bottom: 15px;
 }
+.project-screenshot {
+  width: 120px;  /* Adjust the width as needed */
+  height: 50px;  /* Maintain aspect ratio */
+  margin-top: 10px;
+}
 
-
-
-/* Responsive Design for Smaller Screens (Optional) */
+/* Responsive Design for Smaller Screens (Max-width: 768px) */
 @media (max-width: 768px) {
   .project-container {
-    justify-content: space-evenly;  /* Adjust spacing for smaller screens */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
-  
+
   .project-box {
-    flex: 1 1 calc(33% - 20px);    /* Three items per row */
-    max-width: none;               /* Remove max-width constraint */
+    flex: 1 1 calc(50% - 20px);  
+    max-width: calc(50% - 20px);  
   }
-}/* Style for the See More link */
+}
+
+/* Responsive Design for Extra Small Screens (Max-width: 350px) */
+@media (max-width: 350px) {
+  .project-box {
+    flex: 1 1 100%; 
+    max-width: 100%; 
+    padding: 15px; 
+  }
+
+  .project-box > i {
+    font-size: 40px; 
+  }
+
+  .project-box h3 {
+    font-size: 16px;  
+  }
+
+  .project-box label {
+    font-size: 14px;  
+  }
+}
+
 /* Style for the See More link */
 .portfolio__button {
-  display: inline-flex;               /* Use flexbox for alignment */
-  align-items: center;                /* Align the icon and text vertically */
-  text-decoration: none;               /* Remove underline */
-  color: #7f00ff;                     /* Purple color */
-  font-weight: 600;                    /* Bold font */
-  font-size: 16px;                     /* Adjust font size */
-  transition: color 0.3s ease;         /* Smooth color change on hover */
-  position: absolute;                  /* Position the button absolutely */
-  bottom: 10px;                        /* 10px from the bottom of the project box */
-  right: 10px;                         /* 10px from the right edge of the project box */
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #7f00ff;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 /* Hover Effect */
 .portfolio__button:hover {
-  color: #6a00cc;                     /* Darker purple on hover */
-  text-decoration: underline;          /* Underline text on hover */
+  color: #6a00cc;
+  text-decoration: underline;
 }
 
 /* Icon Style */
 .portfolio__button .button__icon {
-  margin-left: 8px;                    /* Space between the text and icon */
-  font-size: 18px;                     /* Icon size */
+  margin-left: 8px;
+  font-size: 16px;
 }
+
 
 
 
@@ -887,8 +915,13 @@ h3 {
 /*==================== TESTIMONIAL ====================*/
 
 /*==================== CONTACT ME ====================*/
+html {
+  scroll-behavior: smooth;
+}
+
 #contact {
-  padding-top: 50px; /* Space at the top of the Contact Me section */
+  padding-bottom: 50px; 
+  margin-bottom: 50px;
 }
 .content-wrapper{
   scroll-snap-type: y proximity;
@@ -1063,6 +1096,32 @@ h3 {
   }
   .project__img {
     width: 200px;
+  }
+  .skills__container{
+    padding: 1rem;
+  }
+  .contact__form{
+    padding: 1rem;
+  }
+  .contact__input{
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+  .footer-menu{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem
+  }
+  .bottom-footer p{
+    font-size: 12px;
+  }
+  h1,h2,h3 .button{
+    font-size:16px;
+  }
+  .section{
+    padding: 1rem;
+
   }
 }
 
@@ -1262,7 +1321,6 @@ h3 {
     font-size: 14px;
     margin-top: 10px;
 }
-
 
 @media only screen and (max-width: 1024px){
     .featured-text{
