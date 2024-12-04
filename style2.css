@@ -468,38 +468,55 @@ header {
   justify-self: center;
   align-self: center;
 }
-
 .about__description {
   text-align: center;
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: var(--mb-1-5);  
+  font-size: var(--normal-font-size);  
+  line-height: 1.5;  
 }
 
 .about__info {
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: var(--mb-2-5);
+  justify-content: space-around;  
+  margin-bottom: var(--mb-1-5);  
 }
 
 .about__info-title {
-  font-size: var(--h2-font-size);
+  font-size: var(--h3-font-size);  
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
 }
 
 .about__info-name {
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);  
+  line-height: 1.3;  
 }
-
-.about__info-name,
-.about__info-title {
-  display: block;
-  text-align: center;
-}
-
 .about__buttons {
   display: flex;
   justify-content: center;
+  position: sticky;  
+  bottom: 20px;  
+  margin-top: var(--mb-1);
+  z-index: 10;  
 }
+
+.button {
+  padding: 0.5rem 1rem;  
+  font-size: var(--small-font-size);
+  background-color: #800080; 
+  color: #fff;  
+  border: none;
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
+.button:hover {
+  background-color: #6a0dad; 
+}
+
+
 
 /*==================== SKILLS ====================*/
 .content-wrapper{
