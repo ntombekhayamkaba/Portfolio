@@ -844,9 +844,20 @@ h3 {
   }
 }
 
-/* Optional: Reduce icon size for small screens */
+
 .project-box > i {
-  font-size: 40px; /* Smaller icon on smaller screens */
+  font-size: 40px;
+}
+
+.demo-link {
+  color:#7f00ff;
+  text-decoration: none;  
+  font-weight: bold;
+}
+
+.demo-link:hover {
+  color:#7f00ff;
+  text-decoration: underline;
 }
 
 
